@@ -27,7 +27,7 @@ Follow these steps to set up and run the app on your local machine:
 
 1. Clone the repository:
     ```bash
-    git clone <your-repo-url>
+    git clone https://github.com/feexie/personal_finance_dashboard
     cd personal-finance-dashboard
     ```
 2. Create a virtual environment (optional but recommended):
