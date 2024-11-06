@@ -68,6 +68,12 @@ if st.button("Add Transaction"):
             st.write(filtered_data)
 
             # Calculate total income, expenses, and savings
+
+            # Add some visual appeal with colored metrics
+            st.header("Summary Statistics")
+            st.markdown(f"<h3 style='color: green;'>Total Income: ${total_income:.2f}</h3>", unsafe_allow_html=True)
+            st.markdown(f"<h3 style='color: red;'>Total Expenses: ${total_expense:.2f}</h3>", unsafe_allow_html=True)
+            st.markdown(f"<h3 style='color: blue;'>Savings: ${savings:.2f}</h3>", unsafe_allow_html=True)
             total_income = filtered_data[filtered_data['Type'] == 'Income']['Amount'].sum()
             total_expense = filtered_data[filtered_data['Type'] == 'Expense']['Amount'].sum()
             savings = total_income - total_expense
